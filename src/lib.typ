@@ -23,6 +23,7 @@
   )
   set text(11pt, font: "Libertinus Serif")
   set list(indent: 8pt)
+  set raw(syntaxes: "./syntax/console.sublime-syntax")
   show heading: set block(below: 8pt)
   show raw: set text(font: "Inconsolata")
 
