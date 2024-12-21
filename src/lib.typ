@@ -52,16 +52,6 @@
   )
 
   set par(justify: true)
-
-  show raw.where(block: true): code => {
-    show raw.line: line => {
-      text(fill: gray)[#line.number]
-      h(1em)
-      line.body
-    }
-    code
-  }
-
   show figure: align.with(center)
   show figure: set text(8pt)
   show figure.caption: pad.with(x: 10%)
