@@ -71,7 +71,10 @@ After importing, initialise the template by applying a `show` rule with the
   ]
   #argument(
     "university-logo",
-    types: ("str", none),
+    types: ("content", none),
     default: none,
-  )[Path to university logo. If provided, it will be rendered on the first page.]
+  )[
+    The university logo passed as an image using `#image()`. If provided, it
+    will be rendered on the first page.
+  ]
 ]
