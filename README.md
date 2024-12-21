@@ -27,4 +27,6 @@ To use this template, simply import it from the [Typst Universe][typ-uni].
 <Your content here>
 ```
 
+For further details, please refer to the [manual](./docs/manual.pdf).
+
 [typ-uni]: https://typst.app/universe/

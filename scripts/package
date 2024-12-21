@@ -6,17 +6,17 @@ set -eu
 
 . "$(dirname "${BASH_SOURCE[0]}")/setup"
 
-if (( $# < 1 )) || [[ "${1:-}" == "help" ]]; then
-  echo "package TARGET"
-  echo ""
-  echo "Packages all relevant files into a directory named '<name>/<version>'"
-  echo "at TARGET. If TARGET is set to @local or @preview, the local Typst package"
-  echo "directory will be used so that the package gets installed for local use."
-  echo "The name and version are read from 'typst.toml' in the project root."
-  echo ""
-  echo "Local package prefix: $DATA_DIR/typst/package/local"
-  echo "Local preview package prefix: $DATA_DIR/typst/package/preview"
-  exit 1
+if (($# < 1)) || [[ "${1:-}" == "help" ]]; then
+	echo "package TARGET"
+	echo ""
+	echo "Packages all relevant files into a directory named '<name>/<version>'"
+	echo "at TARGET. If TARGET is set to @local or @preview, the local Typst package"
+	echo "directory will be used so that the package gets installed for local use."
+	echo "The name and version are read from 'typst.toml' in the project root."
+	echo ""
+	echo "Local package prefix: $DATA_DIR/typst/package/local"
+	echo "Local preview package prefix: $DATA_DIR/typst/package/preview"
+	exit 1
 fi
 
 TARGET="$(resolve-target "${1:?Missing target path, @local or @preview}")"
@@ -33,9 +33,9 @@ function enumerate {
 	else
 		local files
 		readarray -t files < <(find "$root" \
-      -mindepth 1 -maxdepth 1 \
-      -not -name .git \
-      -not -name .typstignore)
+			-mindepth 1 -maxdepth 1 \
+			-not -name .git \
+			-not -name .typstignore)
 		# declare -p files >&2
 
 		local f
@@ -70,14 +70,14 @@ readarray -t files < <(enumerate ".")
 TMP="$(mktemp -d)"
 
 for f in "${files[@]}"; do
-  mkdir -p "$TMP/$(dirname "$f")" 2>/dev/null
-  cp -r "$ROOT/$f" "$TMP/$f"
+	mkdir -p "$TMP/$(dirname "$f")" 2>/dev/null
+	cp -r "$ROOT/$f" "$TMP/$f"
 done
 
 TARGET="${TARGET:?}/${PKG_PREFIX:?}/${VERSION:?}"
 echo "Packaged to: $TARGET"
 if rm -r "${TARGET:?}" 2>/dev/null; then
-  echo "Overwriting existing version."
+	echo "Overwriting existing version."
 fi
 mkdir -p "$TARGET"
 
