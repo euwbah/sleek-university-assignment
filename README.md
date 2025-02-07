@@ -2,14 +2,14 @@
 
 ![Thumbnail of the sample PDF](./assets/thumbnail.png)
 
-A clean and simple Typst template for writing university assignments.
+A sleek Typst template for writing university assignments.
 
 ## Usage
 
 To use this template, simply import it from the [Typst Universe][typ-uni].
 
 ```typ
-#import "@preview/university-assignment:0.1.0": assignment
+#import "@preview/sleek-university-assignment:0.1.0": assignment
 
 #show: assignment.with(
   title: "Assignment",

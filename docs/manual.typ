@@ -1,11 +1,11 @@
 #import "@preview/mantys:0.1.4": *
 
 #show: mantys.with(
-  name: "university-assignment",
-  title: "University Assignment Package",
+  name: "sleek-university-assignment",
+  title: "Sleek University Assignment Package",
   subtitle: [Effortlessly write unviersity assignments.],
   authors: "Utkarsh Verma",
-  url: "https://github.com/UtkarshVerma/typst-university-assignment",
+  url: "https://github.com/UtkarshVerma/sleek-university-assignment",
   license: "MIT",
   version: "0.1.0",
   date: datetime.today(),
@@ -21,7 +21,7 @@
 Just import it inside your `typ` file:
 
 #codesnippet[```typst
-  #import "@preview/university-assignment:0.1.0": *
+  #import "@preview/sleek-university-assignment:0.1.0": *
   ```]
 
 == Initialising the template
