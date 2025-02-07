@@ -1,7 +1,5 @@
 # The `sleek-university-assignment` package
 
-![Thumbnail of the sample PDF](./assets/thumbnail.png)
-
 A sleek Typst template for writing university assignments.
 
 ## Usage
