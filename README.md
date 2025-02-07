@@ -1,4 +1,6 @@
-# The `university-assignment` package
+# The `sleek-university-assignment` package
+
+![Thumbnail of the sample PDF](./assets/thumbnail.png)
 
 A clean and simple Typst template for writing university assignments.
 
