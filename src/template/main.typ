@@ -1,4 +1,4 @@
-#import "@preview/university-assignment:0.1.0": assignment
+#import "@preview/sleek-university-assignment:0.1.0": assignment
 
 #show: assignment.with(
   title: "Assignment 1",
